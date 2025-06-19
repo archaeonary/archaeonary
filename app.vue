@@ -3,7 +3,7 @@
   <NuxtRouteAnnouncer />
   <header class="container">
     <h1>Archaeonary</h1>
-    <p>Das Archäologie Wörterbuch-Projekt</p>
+    <p>Das Archäologie-Wörterbuch-Projekt</p>
   </header>
   <nav class="container">
     <ul>
@@ -41,13 +41,8 @@
 </template>
 
 <script setup lang="ts">
-// Get all terms
 const { data: terms } = await useAsyncData("terms", () => {
   return queryCollection("terms").order("name", "DESC").all();
-});
-
-const { data: epitaph } = await useAsyncData("epitaph", () => {
-  return queryCollection("terms").where("stem", "=", "epitaph").first();
 });
 
 const numberOfTerms = computed(() => {
