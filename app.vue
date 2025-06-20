@@ -3,7 +3,7 @@
   <NuxtRouteAnnouncer />
   <header class="container">
     <h1>Archaeonary</h1>
-    <p>Das Archäologie-Wörterbuch-Projekt</p>
+    <em>Das Wörterbuch-Projekt für chinesische Archäologie</em>
   </header>
   <nav class="container">
     <ul>
@@ -14,7 +14,7 @@
   </nav>
   <main class="container">
     <p>
-      Archaeonary ist ein Projekt zur Erschließung archäologischer Begriffe.
+      Archaeonary ist ein Projekt zur Erschließung von Begriffen aus der chinesischen Archäologie.
     </p>
     <p>
       Hauptanliegen ist das Erstellen eines Wörterbuchs mit Übersetzungen und
@@ -24,7 +24,9 @@
       >Derzeit gibt es {{ numberOfTerms }}
       {{ numberOfTerms === 1 ? "Begriff" : "Begriffe" }}.</small
     >
-    <small v-else>Derzeit gibt es keine Begriffe.</small>
+    <section>
+      <small v-else>Derzeit gibt es keine Begriffe.</small>
+    </section>
     <section v-for="term in terms" :key="term.id">
       <article>
         <h4>{{ term.name }}</h4>
