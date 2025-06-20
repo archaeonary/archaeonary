@@ -20,11 +20,11 @@
       Hauptanliegen ist das Erstellen eines Wörterbuchs mit Übersetzungen und
       Erläuterungen dieser Begriffe.
     </p>
-    <small v-if="numberOfTerms > 0"
-      >Derzeit gibt es {{ numberOfTerms }}
-      {{ numberOfTerms === 1 ? "Begriff" : "Begriffe" }}.</small
-    >
     <section>
+      <small v-if="numberOfTerms > 0"
+        >Derzeit gibt es {{ numberOfTerms }}
+        {{ numberOfTerms === 1 ? "Begriff" : "Begriffe" }}.</small
+      >
       <small v-else>Derzeit gibt es keine Begriffe.</small>
     </section>
     <section v-for="term in terms" :key="term.id">
